@@ -1,0 +1,137 @@
+{
+    "attack_power": [
+        {
+            "name": "All Attack",
+            "rate": 34.5
+        },
+        {
+            "name": "Attack Rate",
+            "rate": 3
+        },
+        {
+            "name": "Crit Rate",
+            "rate": 750
+        },
+        {
+            "name": "Crit DMG",
+            "rate": 177
+        },
+        {
+            "name": "All Skill Amp",
+            "rate": 349
+        },
+        {
+            "name": "Accuracy",
+            "rate": 6.5
+        },
+        {
+            "name": "Penetration",
+            "rate": 71
+        },
+        {
+            "name": "Add Damage",
+            "rate": 35
+        },
+        {
+            "name": "Ignore Evasion",
+            "rate": 4.5
+        },
+        {
+            "name": "Final DMG Increase",
+            "rate": 1604
+        },
+        {
+            "name": "Ignore DMG Reduce",
+            "rate": 16.8
+        },
+        {
+            "name": "Ignore Resist Crit Rate",
+            "rate": 574
+        },
+        {
+            "name": "Ignore Resist Crit DMG",
+            "rate": 142.5
+        },
+        {
+            "name": "Ignore Resist Skill Amp",
+            "rate": 267  
+        },
+        {
+            "name": "Normal DMG Up",
+            "rate": 85
+        },
+        {
+            "name": "Cancel Ignore Penetration",
+            "rate": 47.8
+        }
+    ],
+    "defense_power": [
+        {
+            "name": "HP",
+            "rate": 5
+        },
+        {
+            "name": "Defense",
+            "rate": 21
+        },
+        {
+            "name": "Defense Rate",
+            "rate": 2.4
+        },
+        {
+            "name": "Evasion",
+            "rate": 5.3
+        },
+        {
+            "name": "DMG Reduce",
+            "rate": 19.5
+        },
+        {
+            "name": "Resist Crit Rate",
+            "rate": 636
+        },
+        {
+            "name": "Resist Crit DMG",
+            "rate": 150
+        },
+        {
+            "name": "Resist Skill Amp",
+            "rate": 296.5
+        },
+        {
+            "name": "Ignore Penetration",
+            "rate": 53.1
+        },
+        {
+            "name": "Ignore Accuracy",
+            "rate": 5.3
+        },
+        {
+            "name": "Final DMG Decrease",
+            "rate": 1451
+        },
+        {
+            "name": "Cancel Ignore DMG Reduce",
+            "rate": 19.9
+        }
+    ],
+    "armor": [
+        {
+            "name": "Defense",
+            "rate": 21
+        },
+        {
+            "name": "Defense Rate",
+            "rate": 2.4
+        },
+        {
+            "name": "HP",
+            "rate": 5
+        },
+        {
+            "name": "Ignore Penetration",
+            "rate": 53.1
+        }
+    ],
+    "weapon":[]
+}
