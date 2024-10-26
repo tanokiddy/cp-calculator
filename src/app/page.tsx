@@ -19,11 +19,8 @@ export default function Home() {
     reset();
     localStorage.setItem(key, "");
     if (defaultData) {
-      Object.keys(defaultData).forEach((item) => {
-        setValue(item, {
-          name: item,
-          value: ''
-        });
+      Object.entries(defaultData).forEach((item: any) => {
+        setValue(item[0], "");
       });
     }
     setTotal(0);
@@ -39,6 +36,11 @@ export default function Home() {
   };
 
   const onSubmit = (data: any) => {
+    Object.keys(data).forEach((item) => {
+      if (!data[item]) {
+        delete data[item];
+      }
+    });
     const newData = {
       type,
       stats: data,

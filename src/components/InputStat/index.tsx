@@ -26,7 +26,6 @@ const InputStat = (props: Props) => {
           <Controller
             control={control}
             name={item.name}
-            defaultValue={defaultData?.[item.name]?.value}
             render={() => (
               <input
                 {...register(item.name, {
@@ -37,7 +36,6 @@ const InputStat = (props: Props) => {
                 })}
                 className="w-[80px] text-black px-1 focus:outline-none focus-visible:outline-none rounded-[4px]"
                 type="text"
-                name={item.name}
                 id={item.name}
                 defaultValue={defaultData?.[item.name]?.value}
               />
