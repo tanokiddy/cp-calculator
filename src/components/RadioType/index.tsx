@@ -43,7 +43,7 @@ const RadioType = (props: any) => {
             >
               <RadioGroup.Indicator className="RadioGroupIndicator" />
             </RadioGroup.Item>
-            <label className="leading-[25px] font-semibold text-xs ml-4 w-[calc(100%_-_25px)] text-nowrap" htmlFor={item.value}>
+            <label className="leading-[25px] font-semibold text-xs pl-4 w-[calc(100%_-_25px)] text-nowrap" htmlFor={item.value}>
               {item.label}
             </label>
           </div>

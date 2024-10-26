@@ -20,7 +20,10 @@ export default function Home() {
     localStorage.setItem(key, "");
     if (defaultData) {
       Object.keys(defaultData).forEach((item) => {
-        setValue(item, '');
+        setValue(item, {
+          name: item,
+          value: ''
+        });
       });
     }
     setTotal(0);
