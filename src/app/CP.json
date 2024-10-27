@@ -131,7 +131,24 @@
         {
             "name": "Ignore Penetration",
             "rate": 53.1
+        },
+        {
+            "name": "All Skill Amp",
+            "rate": 348.63
+        },
+        {
+            "name": "Crit Rate",
+            "rate": 750
+        },
+        {
+            "name": "HP - Epic",
+            "rate": 5
+        },
+        {
+            "name": "Resist Crit Rate",
+            "rate": 636
         }
+        
     ],
     "weapon":[]
 }
