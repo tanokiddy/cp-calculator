@@ -2,7 +2,7 @@
     "attack_power": [
         {
             "name": "All Attack",
-            "rate": 34.5
+            "rate": 34.6
         },
         {
             "name": "Attack Rate",
@@ -14,11 +14,11 @@
         },
         {
             "name": "Crit DMG",
-            "rate": 177
+            "rate": 176.4
         },
         {
             "name": "All Skill Amp",
-            "rate": 349
+            "rate": 348.67
         },
         {
             "name": "Accuracy",
@@ -58,7 +58,7 @@
         },
         {
             "name": "Normal DMG Up",
-            "rate": 85
+            "rate": 86
         },
         {
             "name": "Cancel Ignore Penetration",
