@@ -2,7 +2,7 @@
     "attack_power": [
         {
             "name": "All Attack",
-            "rate": 34.6
+            "rate": 34
         },
         {
             "name": "Attack Rate",
@@ -14,7 +14,7 @@
         },
         {
             "name": "Crit DMG",
-            "rate": 176.4
+            "rate": 176.5
         },
         {
             "name": "All Skill Amp",
