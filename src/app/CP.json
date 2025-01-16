@@ -1,154 +1,309 @@
 {
-    "attack_power": [
-        {
-            "name": "All Attack",
-            "rate": 34
-        },
-        {
-            "name": "Attack Rate",
-            "rate": 3
-        },
-        {
-            "name": "Crit Rate",
-            "rate": 750
-        },
-        {
-            "name": "Crit DMG",
-            "rate": 176.5
-        },
-        {
-            "name": "All Skill Amp",
-            "rate": 348.63
-        },
-        {
-            "name": "Accuracy",
-            "rate": 6.5
-        },
-        {
-            "name": "Penetration",
-            "rate": 71
-        },
-        {
-            "name": "Add Damage",
-            "rate": 35
-        },
-        {
-            "name": "Ignore Evasion",
-            "rate": 4.5
-        },
-        {
-            "name": "Final DMG Increase",
-            "rate": 1604
-        },
-        {
-            "name": "Ignore DMG Reduce",
-            "rate": 16.8
-        },
-        {
-            "name": "Ignore Resist Crit Rate",
-            "rate": 574
-        },
-        {
-            "name": "Ignore Resist Crit DMG",
-            "rate": 142.5
-        },
-        {
-            "name": "Ignore Resist Skill Amp",
-            "rate": 267  
-        },
-        {
-            "name": "Normal DMG Up",
-            "rate": 86
-        },
-        {
-            "name": "Cancel Ignore Penetration",
-            "rate": 47.8
-        }
-    ],
-    "defense_power": [
-        {
-            "name": "HP",
-            "rate": 5
-        },
-        {
-            "name": "Defense",
-            "rate": 21
-        },
-        {
-            "name": "Defense Rate",
-            "rate": 2.4
-        },
-        {
-            "name": "Evasion",
-            "rate": 5.3
-        },
-        {
-            "name": "DMG Reduce",
-            "rate": 19.5
-        },
-        {
-            "name": "Resist Crit Rate",
-            "rate": 636
-        },
-        {
-            "name": "Resist Crit DMG",
-            "rate": 150
-        },
-        {
-            "name": "Resist Skill Amp",
-            "rate": 296.5
-        },
-        {
-            "name": "Ignore Penetration",
-            "rate": 53.1
-        },
-        {
-            "name": "Ignore Accuracy",
-            "rate": 5.3
-        },
-        {
-            "name": "Final DMG Decrease",
-            "rate": 1451
-        },
-        {
-            "name": "Cancel Ignore DMG Reduce",
-            "rate": 19.9
-        }
-    ],
-    "armor": [
-        {
-            "name": "Defense",
-            "rate": 21
-        },
-        {
-            "name": "Defense Rate",
-            "rate": 2.4
-        },
-        {
-            "name": "HP",
-            "rate": 5
-        },
-        {
-            "name": "Ignore Penetration",
-            "rate": 53.1
-        },
-        {
-            "name": "All Skill Amp",
-            "rate": 348.63
-        },
-        {
-            "name": "Crit Rate",
-            "rate": 750
-        },
-        {
-            "name": "HP - Epic",
-            "rate": 5
-        },
-        {
-            "name": "Resist Crit Rate",
-            "rate": 636
-        }
-        
-    ],
-    "weapon":[]
+  "attack_power": [
+    {
+      "name": "All Att",
+      "rate": 34
+    },
+    {
+      "name": "Att Rate",
+      "rate": 3
+    },
+    {
+      "name": "Crit Rate",
+      "rate": 750
+    },
+    {
+      "name": "Crit DMG",
+      "rate": 176.5
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    },
+    {
+      "name": "Accuracy",
+      "rate": 6.5
+    },
+    {
+      "name": "Penetration",
+      "rate": 71
+    },
+    {
+      "name": "Add Damage",
+      "rate": 35
+    },
+    {
+      "name": "Ig Evasion",
+      "rate": 4.5
+    },
+    {
+      "name": "Final DMG Incr",
+      "rate": 1604
+    },
+    {
+      "name": "Ig DMG Reduce",
+      "rate": 16.8
+    },
+    {
+      "name": "Ig Resist CR",
+      "rate": 574
+    },
+    {
+      "name": "Ig Resist CD",
+      "rate": 142.5
+    },
+    {
+      "name": "Ig Resist Amp",
+      "rate": 267
+    },
+    {
+      "name": "Normal DMG Up",
+      "rate": 86
+    },
+    {
+      "name": "Cancel Ig Pen",
+      "rate": 47.8
+    }
+  ],
+  "defense_power": [
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Def Rate",
+      "rate": 2.4
+    },
+    {
+      "name": "Evasion",
+      "rate": 5.3
+    },
+    {
+      "name": "DMG Reduce",
+      "rate": 19.5
+    },
+    {
+      "name": "Resist CR",
+      "rate": 636
+    },
+    {
+      "name": "Resist CD",
+      "rate": 150
+    },
+    {
+      "name": "Resist Amp",
+      "rate": 296.5
+    },
+    {
+      "name": "Ig Pen",
+      "rate": 53.1
+    },
+    {
+      "name": "Ig Accu",
+      "rate": 5.3
+    },
+    {
+      "name": "Final DMG Decr",
+      "rate": 1451
+    },
+    {
+      "name": "Canc Ig DMG Redu",
+      "rate": 19.9
+    }
+  ],
+  "armor": [
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Def Rate",
+      "rate": 2.4
+    },
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Ig Pen",
+      "rate": 53.1
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    },
+    {
+      "name": "Crit Rate",
+      "rate": 750
+    },
+    {
+      "name": "HP - Epic",
+      "rate": 5
+    },
+    {
+      "name": "Resist CR",
+      "rate": 636
+    }
+  ],
+  "weapon": [],
+  "armor_eu3": [
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Def Rate",
+      "rate": 2.4
+    },
+    {
+      "name": "DMG Reduce",
+      "rate": 19.5
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    }
+  ],
+  "weapon_1h_eu3": [
+    {
+      "name": "All Att",
+      "rate": 34
+    },
+    {
+      "name": "Att Rate",
+      "rate": 3
+    },
+    {
+      "name": "Accuracy",
+      "rate": 6.5
+    },
+    {
+      "name": "Crit DMG",
+      "rate": 176.5
+    }
+  ],
+  "bike_eu3": [
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Def Rate",
+      "rate": 2.4
+    },
+    {
+      "name": "Accuracy",
+      "rate": 6.5
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    }
+  ],
+  "suit_hh_du14": [
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "DMG Reduce",
+      "rate": 19.5
+    },
+    {
+      "name": "Resist Amp",
+      "rate": 296.5
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    }
+  ],
+  "gloves_hh_du14": [
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Accuracy",
+      "rate": 6.5
+    },
+    {
+      "name": "All Att",
+      "rate": 34
+    },
+    {
+      "name": "All Amp",
+      "rate": 348.63
+    }
+  ],
+  "boots_hh_du14": [
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Ig Accu",
+      "rate": 5.3
+    },
+    {
+      "name": "Ig Pen",
+      "rate": 53.1
+    }
+  ],
+  "helm_hh_du14": [
+    {
+      "name": "HP",
+      "rate": 5
+    },
+    {
+      "name": "Def",
+      "rate": 21
+    },
+    {
+      "name": "Def Rate",
+      "rate": 2.4
+    },
+    {
+      "name": "Resist CR",
+      "rate": 636
+    },
+    {
+      "name": "Resist CD",
+      "rate": 150
+    }
+  ],
+  "weapon_1h_ulti_du12": [
+    {
+      "name": "Att Rate",
+      "rate": 3
+    },
+    {
+      "name": "Crit DMG",
+      "rate": 176.5
+    },
+    {
+      "name": "Accuracy",
+      "rate": 6.5
+    },
+    {
+      "name": "All Att",
+      "rate": 34
+    }
+  ]
 }

@@ -18,7 +18,7 @@ const InputStat = (props: Props) => {
       {CP[type].map((item) => (
         <div
           key={item.name}
-          className="flex gap-2 justify-center max-w-[280px] w-full"
+          className="flex gap-2 justify-center max-w-[350px] w-full"
         >
           <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap">
             {item.name}
@@ -43,7 +43,7 @@ const InputStat = (props: Props) => {
           />
         </div>
       ))}
-      <div className="flex gap-2 justify-center max-w-[280px] w-full">
+      <div className="flex gap-2 justify-center max-w-[350px] w-full">
         <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap">
           Total
         </Label.Root>

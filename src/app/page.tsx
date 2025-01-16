@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import RadioType from "@/components/RadioType";
 import InputStat from "@/components/InputStat";
+import CP from '@/app/CP.json'
 
 const key = "CP";
 export type TYPE_SELECT = "attack_power" | "defense_power" | "weapon" | "armor";
@@ -66,7 +67,7 @@ export default function Home() {
         setTotal={setTotal}
         reset={onReset}
       />
-      <div className="max-w-[280px] w-full mx-auto">
+      <div className="max-w-[350px] w-full mx-auto">
         <button
           className="rounded-md px-4 py-1 border bg-white text-black cursor-pointer"
           onClick={onReset}
@@ -75,7 +76,7 @@ export default function Home() {
         </button>
       </div>
       <form
-        className="flex flex-col items-center justify-center gap-4"
+        className={`grid gap-x-6 gap-y-4 max-w-[350px] mx-auto w-full grid-cols-2`}
         onChange={handleSubmit(onSubmit)}
         onSubmit={(e) => e.preventDefault()}
       >
