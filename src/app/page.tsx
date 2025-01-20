@@ -7,12 +7,12 @@ import Base from "@/app/Base.json";
 import { CPTypekey, InputType, StatKey } from "./type";
 import SelectType from "@/components/SelectType";
 
-const CP_KEY = "CP";
-
 export default function Home() {
   const [type, setType] = useState<CPTypekey>("armor");
   const [total, setTotal] = useState<number>(0);
-  const [defaultData, setDefaultData] = useState<any>();
+  const [defaultData, setDefaultData] = useState<InputType>();
+  const [selectKey, resetSelectKey] = useState<number>(0)
+
   const { handleSubmit, register, reset, control, setValue } = useForm({
     mode: "onChange",
   });
@@ -70,12 +70,16 @@ export default function Home() {
           setType={setType}
           setTotal={setTotal}
           reset={onReset}
+          resetSelectKey={resetSelectKey}
         />
         <SelectType 
           setType={setType}
-          setTotal={setTotal}
           reset={reset}
           setDefaultData={setDefaultData}
+          onSubmit={onSubmit}
+          type={type}
+          selectKey={selectKey}
+          resetSelectKey={resetSelectKey}
         />
       </form>
       <div className="max-w-[350px] w-full mx-auto">

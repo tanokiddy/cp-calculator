@@ -1,13 +1,19 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import * as Select from "@radix-ui/react-select";
-import { CPTypekey } from "@/app/type";
+import {
+  CPTypekey,
+  EU_DU_ItemType,
+  EU_DU_Key,
+  EU_DU_ListType,
+  InputType,
+} from "@/app/type";
 import { FieldValues, UseFormReset } from "react-hook-form";
-import EU_DU from '@/app/EU_DU.json'
+import EU_DU from "@/app/EU_DU.json";
 
 type SelectItemType = {
-    label: string
-    key: CPTypekey
-}
+  label: string;
+  key: CPTypekey;
+};
 const selectList: SelectItemType[] = [
   {
     label: "EU3 Armor",
@@ -43,24 +49,39 @@ const selectList: SelectItemType[] = [
   },
 ];
 
+const radioTypeList = ["attack_power", "defense_power", "armor", "weapon"]
+
 type Props = {
-    setType: Dispatch<SetStateAction<CPTypekey>>
-    setTotal: Dispatch<SetStateAction<number>>
-    reset: UseFormReset<FieldValues>
-    setDefaultData: Dispatch<any>
-}
+  type: CPTypekey;
+  setType: Dispatch<SetStateAction<CPTypekey>>;
+  reset: UseFormReset<FieldValues>;
+  setDefaultData: Dispatch<InputType>;
+  onSubmit: (data: InputType) => void;
+  selectKey?: number
+  resetSelectKey: Dispatch<SetStateAction<number>>
+};
 
 const SelectType = (props: Props) => {
-    const { setType, setTotal, reset, setDefaultData } = props
+  const { type, setType, reset, setDefaultData, onSubmit, selectKey, resetSelectKey } = props;
+  
+  // const isRadioType = radioTypeList.some(item => item === type)
   return (
     <div>
       <Select.Root
-        onValueChange={(v: CPTypekey) => {
-            reset();
-            setType(v);
-            setTotal(0);
-            // setDefaultData()
+        onValueChange={(selectValue: EU_DU_Key) => {
+          const data: InputType = {};
+          (EU_DU as EU_DU_ListType)[selectValue].forEach(
+            (item: EU_DU_ItemType) => {
+              data[item.key] = item.value;
+            }
+          );
+          reset();
+          // resetSelectKey()
+          setType(selectValue);
+          setDefaultData(data);
+          onSubmit(data);
         }}
+        key={selectKey}
       >
         <Select.Trigger className="select-none pr-2 py-1 flex gap-2">
           <Select.Value placeholder="Select DU/UE stat" />
@@ -68,7 +89,7 @@ const SelectType = (props: Props) => {
         </Select.Trigger>
         <Select.Portal>
           <Select.Content
-            className="bg-white text-black rounded-lg"
+            className="bg-white text-black rounded-lg overflow-hidden"
             position="popper"
           >
             <Select.Viewport className="SelectViewport">
@@ -77,7 +98,7 @@ const SelectType = (props: Props) => {
                   <Select.Item
                     value={item.key}
                     key={item.key}
-                    className="focus:outline-none cursor-pointer px-2 py-1 hover:bg-black hover:text-white transition-all ease-linear"
+                    className="focus:outline-none cursor-pointer px-2 py-1 hover:bg-blue-700 hover:text-white transition-hover ease-linear focus-within:bg-blue-700 focus-within:text-white"
                   >
                     <Select.ItemText>{item.label}</Select.ItemText>
                   </Select.Item>

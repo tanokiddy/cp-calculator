@@ -1,19 +1,18 @@
 import * as Label from "@radix-ui/react-label";
 import CP from "@/app/CP.json";
 import { Control, Controller, FieldValues, UseFormRegister } from "react-hook-form";
-import { CPType, CPTypekey } from "@/app/type";
+import { CPType, CPTypekey, InputType } from "@/app/type";
 
 type Props = {
   type: CPTypekey;
   register: UseFormRegister<FieldValues>
   total?: number;
-  defaultData: any;
+  defaultData?: InputType;
   control: Control<FieldValues, any>;
 };
 
 const InputStat = (props: Props) => {
   const { type, register, total, defaultData, control } = props;
-  console.log(CP[type])
   return (
     <>
       {(CP as CPType)[type].map((item) => {
@@ -32,14 +31,13 @@ const InputStat = (props: Props) => {
                 <input
                   {...register(item.key, {
                     setValueAs: (v: string): number => {
-                      console.log(v)
                       return parseInt(v)
                     },
                   })}
                   className="w-[45px] text-black px-1 focus:outline-none focus-visible:outline-none rounded-[4px]"
                   type="text"
                   id={item.name}
-                  defaultValue={defaultData?.[item.key]?.value || ''}
+                  defaultValue={defaultData?.[item.key] || ''}
                 />
               )}
             />

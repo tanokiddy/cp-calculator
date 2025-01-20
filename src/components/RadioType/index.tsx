@@ -28,10 +28,11 @@ type Props = {
   setType: Dispatch<SetStateAction<CPTypekey>>
   setTotal: Dispatch<SetStateAction<number>>
   reset: UseFormReset<FieldValues>
+  resetSelectKey: Dispatch<SetStateAction<number>>
 }
 
 const RadioType = (props: Props) => {
-  const { type, setType, setTotal, reset } = props;
+  const { type, setType, setTotal, reset, resetSelectKey } = props;
   return (
     <RadioGroup.Root
       className="RadioGroupRoot w-full grid grid-cols-2 gap-3"
@@ -41,6 +42,7 @@ const RadioType = (props: Props) => {
         reset();
         setType(v);
         setTotal(0);
+        resetSelectKey(Math.random())
       }}
     >
       {allType.map((item) => (

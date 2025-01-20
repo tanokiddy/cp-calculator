@@ -26,7 +26,7 @@ export type StatKey =
   | "ig_pen"
   | "ig_accu"
   | "final_dmg_decr"
-  | "cancel_ig_dmg_reduce"
+  | "cancel_ig_dmg_reduce";
 
 export type StatType = {
   key: StatKey;
@@ -48,10 +48,35 @@ export type CPTypekey =
   | "helm_hh_du14"
   | "weapon_1h_ulti_du12";
 
-export type CPType =  {
-  [key in CPTypekey]: StatType[]
+export type CPType = {
+  [key in CPTypekey]: StatType[];
 };
 
 export type InputType = {
-    [key in StatKey]?: number
-}
+  [key in StatKey]?: number;
+};
+
+export type EU_DU_Key =
+  | "armor_eu3"
+  | "weapon_1h_eu3"
+  | "bike_eu3"
+  | "suit_hh_du14"
+  | "gloves_hh_du14"
+  | "boots_hh_du14"
+  | "helm_hh_du14"
+  | "weapon_1h_ulti_du12";
+
+export type RadioTypeKey =
+  | "attack_power"
+  | "defense_power"
+  | "armor"
+  | "weapon";
+
+export type EU_DU_ItemType = {
+  key: StatKey;
+  value: number;
+};
+
+export type EU_DU_ListType = {
+  [key in EU_DU_Key]: EU_DU_ItemType[];
+};

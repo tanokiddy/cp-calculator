@@ -20,15 +20,15 @@
   "weapon_1h_eu3": [
     {
       "key": "all_att",
-      "value": 190
+      "value": 100
     },
     {
       "key": "att_rate",
-      "value": 140
+      "value": 190
     },
     {
       "key": "accu",
-      "value": 100
+      "value": 140
     },
     {
       "key": "cd",
