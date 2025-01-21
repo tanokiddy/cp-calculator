@@ -1,0 +1,158 @@
+{
+  "armor_eu3": [
+    {
+      "key": "def",
+      "value": 80
+    },
+    {
+      "key": "def_rate",
+      "value": 130
+    },
+    {
+      "key": "dmg_reduce",
+      "value": 24
+    },
+    {
+      "key": "all_amp",
+      "value": 3
+    }
+  ],
+  "weapon_1h_eu3": [
+    {
+      "key": "all_att",
+      "value": 190
+    },
+    {
+      "key": "att_rate",
+      "value": 140
+    },
+    {
+      "key": "accu",
+      "value": 100
+    },
+    {
+      "key": "cd",
+      "value": 7
+    }
+  ],
+  "bike_eu3": [
+    {
+      "key": "def",
+      "value": 120
+    },
+    {
+      "key": "def_rate",
+      "value": 160
+    },
+    {
+      "key": "accu",
+      "value": 240
+    },
+    {
+      "key": "all_amp",
+      "value": 4
+    }
+  ],
+  "suit_hh_du14": [
+    {
+      "key": "hp",
+      "value": 190
+    },
+    {
+      "key": "def",
+      "value": 92
+    },
+    {
+      "key": "dmg_reduce",
+      "value": 50
+    },
+    {
+      "key": "resist_amp",
+      "value": 7
+    },
+    {
+      "key": "all_amp",
+      "value": 2
+    }
+  ],
+  "gloves_hh_du14": [
+    {
+      "key": "hp",
+      "value": 190
+    },
+    {
+      "key": "def",
+      "value": 92
+    },
+    {
+      "key": "accu",
+      "value": 60
+    },
+    {
+      "key": "all_att",
+      "value": 60
+    },
+    {
+      "key": "all_amp",
+      "value": 2
+    }
+  ],
+  "boots_hh_du14": [
+    {
+      "key": "hp",
+      "value": 190
+    },
+    {
+      "key": "def",
+      "value": 92
+    },
+    {
+      "key": "ig_accu",
+      "value": 145
+    },
+    {
+      "key": "ig_pen",
+      "value": 60
+    }
+  ],
+  "helm_hh_du14": [
+    {
+      "key": "hp",
+      "value": 190
+    },
+    {
+      "key": "def",
+      "value": 92
+    },
+    {
+      "key": "def_rate",
+      "value": 480
+    },
+    {
+      "key": "resist_cr",
+      "value": 1
+    },
+    {
+      "key": "resist_cd",
+      "value": 14
+    }
+  ],
+  "weapon_1h_ulti_du12": [
+    {
+      "key": "att_rate",
+      "value": 270
+    },
+    {
+      "key": "cd",
+      "value": 6
+    },
+    {
+      "key": "accu",
+      "value": 150
+    },
+    {
+      "key": "all_att",
+      "value": 80
+    }
+  ]
+}

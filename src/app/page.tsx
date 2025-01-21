@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import RadioType from "@/components/RadioType";
 import InputStat from "@/components/InputStat";
-import CP from '@/app/CP.json'
+import Base from "@/app/Base.json";
+import { CPTypekey, InputType, StatKey } from "./type";
+import SelectType from "@/components/SelectType";
 
-const key = "CP";
-export type TYPE_SELECT = "attack_power" | "defense_power" | "weapon" | "armor";
+const CP_KEY = "CP";
 
 export default function Home() {
-  const [type, setType] = useState<TYPE_SELECT>("armor");
+  const [type, setType] = useState<CPTypekey>("armor");
   const [total, setTotal] = useState<number>(0);
   const [defaultData, setDefaultData] = useState<any>();
   const { handleSubmit, register, reset, control, setValue } = useForm({
@@ -18,55 +19,65 @@ export default function Home() {
 
   const onReset = () => {
     reset();
-    localStorage.setItem(key, "");
+    // localStorage.setItem(CP_KEY, "");
     if (defaultData) {
-      Object.entries(defaultData).forEach((item: any) => {
-        setValue(item[0], "");
+      Object.entries(defaultData).forEach(([key, value]) => {
+        setValue(key, "");
       });
     }
     setTotal(0);
   };
 
-  const onTotal = (data: any) => {
-    let total: any = 0;
-    Object.values(data).forEach((item: any) => {
-      if (Number.isNaN(item.value)) return;
-      total += item.value * item.rate;
+  const onTotal = (data: InputType) => {
+    let total: number = 0;
+    Object.entries(data).forEach(([key, value]) => {
+      if (Number.isNaN(value)) return;
+      total += value * Base[key as StatKey];
     });
     setTotal(Math.floor(total));
   };
 
-  const onSubmit = (data: any) => {
-    Object.keys(data).forEach((item) => {
-      if (!data[item]) {
-        delete data[item];
+  const onSubmit = (data: InputType) => {
+    Object.keys(data).forEach((key) => {
+      if (!data[key as StatKey]) {
+        delete data[key as StatKey];
       }
     });
-    const newData = {
-      type,
-      stats: data,
-    };
-    localStorage.setItem(key, JSON.stringify(newData));
+    // const newData = {
+    //   type,
+    //   stats: data,
+    // };
+    // localStorage.setItem(CP_KEY, JSON.stringify(newData));
     onTotal(data);
   };
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem(key) || JSON.stringify(""));
-    if (data) {
-      setDefaultData(data?.stats);
-      setType(data?.type);
-      onTotal(data?.stats);
-    }
+    // const data = JSON.parse(localStorage.getItem(CP_KEY) || JSON.stringify(""));
+    // if (data) {
+    //   setDefaultData(data?.stats);
+    //   setType(data?.type);
+    //   onTotal(data?.stats);
+    // }
   }, []);
 
   return (
     <div className="flex flex-col gap-6 mt-10">
-      <RadioType
-        type={type}
-        setType={setType}
-        setTotal={setTotal}
-        reset={onReset}
-      />
+      <form
+        className="flex flex-col gap-4 max-w-[350px] w-full mx-auto"
+      >
+        <RadioType
+          type={type}
+          setType={setType}
+          setTotal={setTotal}
+          reset={onReset}
+        />
+        <SelectType 
+          setType={setType}
+          setTotal={setTotal}
+          reset={reset}
+          setDefaultData={setDefaultData}
+        />
+      </form>
       <div className="max-w-[350px] w-full mx-auto">
         <button
           className="rounded-md px-4 py-1 border bg-white text-black cursor-pointer"

@@ -1,48 +1,51 @@
 import * as Label from "@radix-ui/react-label";
 import CP from "@/app/CP.json";
-import { TYPE_SELECT } from "@/app/page";
-import { Controller } from "react-hook-form";
+import { Control, Controller, FieldValues, UseFormRegister } from "react-hook-form";
+import { CPType, CPTypekey } from "@/app/type";
+
 type Props = {
-  type: TYPE_SELECT;
-  register?: any;
-  total?: any;
+  type: CPTypekey;
+  register: UseFormRegister<FieldValues>
+  total?: number;
   defaultData: any;
-  control: any;
+  control: Control<FieldValues, any>;
 };
 
 const InputStat = (props: Props) => {
   const { type, register, total, defaultData, control } = props;
-
+  console.log(CP[type])
   return (
     <>
-      {CP[type].map((item) => (
-        <div
-          key={item.name}
-          className="flex gap-2 justify-center max-w-[350px] w-full"
-        >
-          <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap">
-            {item.name}
-          </Label.Root>
-          <Controller
-            control={control}
-            name={item.name}
-            render={() => (
-              <input
-                {...register(item.name, {
-                  setValueAs: (v: any) => ({
-                    value: parseInt(v),
-                    rate: item.rate,
-                  }),
-                })}
-                className="w-[80px] text-black px-1 focus:outline-none focus-visible:outline-none rounded-[4px]"
-                type="text"
-                id={item.name}
-                defaultValue={defaultData?.[item.name]?.value}
-              />
-            )}
-          />
-        </div>
-      ))}
+      {(CP as CPType)[type].map((item) => {
+        return (
+          <div
+            key={item.name}
+            className="flex gap-2 justify-center max-w-[350px] w-full"
+          >
+            <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap" htmlFor={item.name}>
+              {item.name}
+            </Label.Root>
+            <Controller
+              control={control}
+              name={item.key}
+              render={() => (
+                <input
+                  {...register(item.key, {
+                    setValueAs: (v: string): number => {
+                      console.log(v)
+                      return parseInt(v)
+                    },
+                  })}
+                  className="w-[45px] text-black px-1 focus:outline-none focus-visible:outline-none rounded-[4px]"
+                  type="text"
+                  id={item.name}
+                  defaultValue={defaultData?.[item.key]?.value || ''}
+                />
+              )}
+            />
+          </div>
+        )
+      })}
       <div className="flex gap-2 justify-center max-w-[350px] w-full">
         <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap">
           Total
