@@ -49,7 +49,7 @@ const selectList: SelectItemType[] = [
   },
 ];
 
-const radioTypeList = ["attack_power", "defense_power", "armor", "weapon"]
+// const radioTypeList = ["attack_power", "defense_power", "armor", "weapon"]
 
 type Props = {
   type: CPTypekey;

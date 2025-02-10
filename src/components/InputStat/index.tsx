@@ -21,7 +21,7 @@ const InputStat = (props: Props) => {
             key={item.name}
             className="flex gap-2 justify-center max-w-[350px] w-full"
           >
-            <Label.Root className="flex-1 text-xs font-semibold flex items-center text-nowrap" htmlFor={item.name}>
+            <Label.Root className="flex-1 text-xs font-semibold flex items-center truncate" htmlFor={item.name}>
               {item.name}
             </Label.Root>
             <Controller
@@ -34,10 +34,11 @@ const InputStat = (props: Props) => {
                       return parseInt(v)
                     },
                   })}
-                  className="w-[45px] text-black px-1 focus:outline-none focus-visible:outline-none rounded-[4px]"
+                  className="w-[45px] placeholder:text-black dark:placeholder:text-white text-black dark:text-white dark:bg-black px-1 focus:outline-none focus-visible:outline-none rounded-md"
                   type="text"
                   id={item.name}
                   defaultValue={defaultData?.[item.key] || ''}
+                  placeholder="0"
                 />
               )}
             />

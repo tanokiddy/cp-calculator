@@ -4,8 +4,9 @@ import { useForm } from "react-hook-form";
 import RadioType from "@/components/RadioType";
 import InputStat from "@/components/InputStat";
 import Base from "@/app/Base.json";
-import { CPTypekey, InputType, StatKey } from "./type";
+import { CPType, CPTypekey, InputType, StatKey } from "./type";
 import SelectType from "@/components/SelectType";
+import CP from "@/app/CP.json";
 
 export default function Home() {
   const [type, setType] = useState<CPTypekey>("armor");
@@ -19,7 +20,9 @@ export default function Home() {
 
   const onReset = () => {
     reset();
-    // localStorage.setItem(CP_KEY, "");
+    (CP as CPType)[type].forEach(item => {
+      setValue(item.key, '')
+    })
     if (defaultData) {
       Object.entries(defaultData).forEach(([key, value]) => {
         setValue(key, "");
@@ -34,6 +37,7 @@ export default function Home() {
       if (Number.isNaN(value)) return;
       total += value * Base[key as StatKey];
     });
+    
     setTotal(Math.floor(total));
   };
 
@@ -61,7 +65,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 mt-10">
+    <div className="flex flex-col gap-6 max-w-[350px] h-[calc(100vh_-_32px)] mt-4 mx-auto dark:bg-[#f0eeee] bg-black text-white dark:text-black p-2 pt-10 rounded-xl">
       <form
         className="flex flex-col gap-4 max-w-[350px] w-full mx-auto"
       >
@@ -84,7 +88,7 @@ export default function Home() {
       </form>
       <div className="max-w-[350px] w-full mx-auto">
         <button
-          className="rounded-md px-4 py-1 border bg-white text-black cursor-pointer"
+          className="rounded-md px-4 py-1 border bg-white text-black dark:text-white dark:bg-black cursor-pointer"
           onClick={onReset}
         >
           Reset
