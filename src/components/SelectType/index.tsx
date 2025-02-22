@@ -49,8 +49,6 @@ const selectList: SelectItemType[] = [
   },
 ];
 
-// const radioTypeList = ["attack_power", "defense_power", "armor", "weapon"]
-
 type Props = {
   type: CPTypekey;
   setType: Dispatch<SetStateAction<CPTypekey>>;
@@ -58,13 +56,11 @@ type Props = {
   setDefaultData: Dispatch<InputType>;
   onSubmit: (data: InputType) => void;
   selectKey?: number
-  resetSelectKey: Dispatch<SetStateAction<number>>
 };
 
 const SelectType = (props: Props) => {
-  const { type, setType, reset, setDefaultData, onSubmit, selectKey, resetSelectKey } = props;
+  const { setType, reset, setDefaultData, onSubmit } = props;
   
-  // const isRadioType = radioTypeList.some(item => item === type)
   return (
     <div>
       <Select.Root
@@ -76,12 +72,10 @@ const SelectType = (props: Props) => {
             }
           );
           reset();
-          // resetSelectKey()
           setType(selectValue);
           setDefaultData(data);
           onSubmit(data);
         }}
-        key={selectKey}
       >
         <Select.Trigger className="select-none pr-2 py-1 flex gap-2">
           <Select.Value placeholder="Select DU/UE stat" />
