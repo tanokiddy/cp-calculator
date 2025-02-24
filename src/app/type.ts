@@ -56,7 +56,7 @@ export type InputType = {
   [key in StatKey]?: number;
 };
 
-export type EU_DU_Key =
+export type EUDUKey =
   | "armor_eu3"
   | "weapon_1h_eu3"
   | "bike_eu3"
@@ -72,11 +72,16 @@ export type RadioTypeKey =
   | "armor"
   | "weapon";
 
-export type EU_DU_ItemType = {
+export type EUDUItemType = {
   key: StatKey;
   value: number;
 };
 
-export type EU_DU_ListType = {
-  [key in EU_DU_Key]: EU_DU_ItemType[];
+export type EUDUListType = {
+  [key in EUDUKey]: EUDUItemType[];
+};
+
+export type SelectItemType = {
+  label: string;
+  key: CPTypekey;
 };

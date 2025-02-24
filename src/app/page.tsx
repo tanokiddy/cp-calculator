@@ -1,19 +1,29 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import RadioType from "@/components/RadioType";
-import InputStat from "@/components/InputStat";
 import Base from "@/app/Base.json";
-import { CPType, CPTypekey, InputType, StatKey } from "./type";
-import SelectType from "@/components/SelectType";
+import {
+  CPType,
+  CPTypekey,
+  EUDUItemType,
+  EUDUKey,
+  EUDUListType,
+  InputType,
+  StatKey,
+} from "./type";
 import CP from "@/app/CP.json";
+import EU_DU_List from "@/app/EU_DU.json";
+import ButtonControl from "@/components/ButtonControl";
+import TopAction from "@/components/TopAction";
+import InputField from "@/components/InputField";
+import Container from "@/components/Container";
 
 export default function Home() {
   const [type, setType] = useState<CPTypekey>("armor");
   const [total, setTotal] = useState<number>(0);
   const [defaultData, setDefaultData] = useState<InputType>();
 
-  const { handleSubmit, register, reset, control, setValue } = useForm({
+  const { handleSubmit, reset, control, setValue } = useForm({
     mode: "onChange",
   });
 
@@ -49,47 +59,39 @@ export default function Home() {
     onTotal(data);
   };
 
-  useEffect(() => {
-  }, []);
+  const onValueChangeRadio = (value: CPTypekey) => {
+    onReset();
+    setType(value);
+  };
+
+  const onValueChangeType = (value: EUDUKey) => {
+    const data: InputType = {};
+    (EU_DU_List as EUDUListType)[value].forEach((item: EUDUItemType) => {
+      data[item.key] = item.value;
+    });
+    reset();
+    setType(value);
+    setDefaultData(data);
+    onSubmit(data);
+  };
+
+  useEffect(() => {}, []);
 
   return (
-    <div className="flex flex-col gap-6 max-w-[350px] h-[calc(100vh_-_32px)] mt-4 mx-auto dark:bg-[#f0eeee] bg-black text-white dark:text-black p-2 pt-10 rounded-xl">
-      <form className="flex flex-col gap-4 max-w-[350px] w-full mx-auto">
-        <RadioType
-          type={type}
-          setType={setType}
-          setTotal={setTotal}
-          reset={onReset}
-        />
-        <SelectType
-          setType={setType}
-          reset={reset}
-          setDefaultData={setDefaultData}
-          onSubmit={onSubmit}
-          type={type}
-        />
-      </form>
-      <div className="max-w-[350px] w-full mx-auto">
-        <button
-          className="rounded-md px-4 py-1 border bg-white text-black dark:text-white dark:bg-black cursor-pointer"
-          onClick={onReset}
-        >
-          Reset
-        </button>
-      </div>
-      <form
-        className={`grid gap-x-6 gap-y-4 max-w-[350px] mx-auto w-full grid-cols-2`}
+    <Container>
+      <TopAction
+        cpType={type}
+        onValueChangeRadio={(value) => onValueChangeRadio(value)}
+        onValueChangeType={(value) => onValueChangeType(value)}
+      />
+      <ButtonControl onReset={onReset} />
+      <InputField
+        type={type}
+        total={total}
+        defaultData={defaultData}
         onChange={handleSubmit(onSubmit)}
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <InputStat
-          type={type}
-          register={register}
-          total={total}
-          defaultData={defaultData}
-          control={control}
-        />
-      </form>
-    </div>
+        control={control}
+      />
+    </Container>
   );
 }
