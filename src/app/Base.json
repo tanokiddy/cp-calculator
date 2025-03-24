@@ -1,9 +1,9 @@
 {
-    "all_att": 34,
+    "all_att": 34.58,
     "att_rate": 3,
     "cr": 750,
-    "cd": 176.5,
-    "all_amp": 348.63,
+    "cd": 177,
+    "all_amp": 349,
     "accu": 6.5,
     "pen": 71,
     "add_dmg": 35,
@@ -15,8 +15,9 @@
     "ig_resist_amp": 267,
     "normal_dmg_up": 86,
     "cancel_ig_pen": 47.8,
+    
     "hp": 5,
-    "def": 21,
+    "def": 21.22,
     "def_rate": 2.4,
     "eva": 5.3,
     "dmg_reduce": 19.5,

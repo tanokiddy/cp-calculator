@@ -2,379 +2,308 @@
   "attack_power": [
     {
       "key": "all_att",
-      "name": "All Att",
-      "rate": 34
+      "name": "All Att"
     },
     {
       "key": "att_rate",
-      "name": "Att Rate",
-      "rate": 3
+      "name": "Att Rate"
     },
     {
       "key": "cr",
-      "name": "Crit Rate",
-      "rate": 750
+      "name": "Crit Rate"
     },
     {
       "key": "cd",
-      "name": "Crit DMG",
-      "rate": 176.5
+      "name": "Crit DMG"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     },
     {
       "key": "accu",
-      "name": "Accuracy",
-      "rate": 6.5
+      "name": "Accuracy"
     },
     {
       "key": "pen",
-      "name": "Penetration",
-      "rate": 71
+      "name": "Penetration"
     },
     {
       "key": "add_dmg",
-      "name": "Add Damage",
-      "rate": 35
+      "name": "Add Damage"
     },
     {
       "key": "ig_eva",
-      "name": "Ig Evasion",
-      "rate": 4.5
+      "name": "Ig Evasion"
     },
     {
       "key": "final_dmg_incr",
-      "name": "Final DMG Incr",
-      "rate": 1604
+      "name": "Final DMG Incr"
     },
     {
       "key": "ig_dmg_reduce",
-      "name": "Ig DMG Reduce",
-      "rate": 16.8
+      "name": "Ig DMG Reduce"
     },
     {
       "key": "ig_resist_cr",
-      "name": "Ig Resist CR",
-      "rate": 574
+      "name": "Ig Resist CR"
     },
     {
       "key": "ig_resist_cd",
-      "name": "Ig Resist CD",
-      "rate": 142.5
+      "name": "Ig Resist CD"
     },
     {
       "key": "ig_resist_amp",
-      "name": "Ig Resist Amp",
-      "rate": 267
+      "name": "Ig Resist Amp"
     },
     {
       "key": "normal_dmg_up",
-      "name": "Normal DMG Up",
-      "rate": 86
+      "name": "Normal DMG Up"
     },
     {
       "key": "cancel_ig_pen",
-      "name": "Cancel Ig Pen",
-      "rate": 47.8
+      "name": "Cancel Ig Pen"
     }
   ],
   "defense_power": [
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "def_rate",
-      "name": "Def Rate",
-      "rate": 2.4
+      "name": "Def Rate"
     },
     {
       "key": "eva",
-      "name": "Evasion",
-      "rate": 5.3
+      "name": "Evasion"
     },
     {
       "key": "dmg_reduce",
-      "name": "DMG Reduce",
-      "rate": 19.5
+      "name": "DMG Reduce"
     },
     {
       "key": "resist_cr",
-      "name": "Resist CR",
-      "rate": 636
+      "name": "Resist CR"
     },
     {
       "key": "resist_cd",
-      "name": "Resist CD",
-      "rate": 150
+      "name": "Resist CD"
     },
     {
       "key": "resist_amp",
-      "name": "Resist Amp",
-      "rate": 296.5
+      "name": "Resist Amp"
     },
     {
       "key": "ig_pen",
-      "name": "Ig Pen",
-      "rate": 53.1
+      "name": "Ig Pen"
     },
     {
       "key": "ig_accu",
-      "name": "Ig Accu",
-      "rate": 5.3
+      "name": "Ig Accu"
     },
     {
       "key": "final_dmg_decr",
-      "name": "Final DMG Decr",
-      "rate": 1451
+      "name": "Final DMG Decr"
     },
     {
       "key": "cancel_ig_dmg_reduce",
-      "name": "Canc Ig DMG Redu",
-      "rate": 19.9
+      "name": "Canc Ig DMG Redu"
     }
   ],
   "armor": [
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "def_rate",
-      "name": "Def Rate",
-      "rate": 2.4
+      "name": "Def Rate"
     },
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "ig_pen",
-      "name": "Ig Pen",
-      "rate": 53.1
+      "name": "Ig Pen"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     },
     {
       "key": "cr",
-      "name": "Crit Rate",
-      "rate": 750
+      "name": "Crit Rate"
     },
     {
       "key": "hp_epic",
-      "name": "HP - Epic",
-      "rate": 5
+      "name": "HP - Epic"
     },
     {
       "key": "resist_cr",
-      "name": "Resist CR",
-      "rate": 636
+      "name": "Resist CR"
     }
   ],
   "weapon": [],
   "armor_eu3": [
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "def_rate",
-      "name": "Def Rate",
-      "rate": 2.4
+      "name": "Def Rate"
     },
     {
       "key": "dmg_reduce",
-      "name": "DMG Reduce",
-      "rate": 19.5
+      "name": "DMG Reduce"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     }
   ],
   "weapon_1h_eu3": [
     {
       "key": "all_att",
-      "name": "All Att",
-      "rate": 34
+      "name": "All Att"
     },
     {
       "key": "att_rate",
-      "name": "Att Rate",
-      "rate": 3
+      "name": "Att Rate"
     },
     {
       "key": "accu",
-      "name": "Accuracy",
-      "rate": 6.5
+      "name": "Accuracy"
     },
     {
       "key": "cd",
-      "name": "Crit DMG",
-      "rate": 176.5
+      "name": "Crit DMG"
     }
   ],
   "bike_eu3": [
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "def_rate",
-      "name": "Def Rate",
-      "rate": 2.4
+      "name": "Def Rate"
     },
     {
       "key": "accu",
-      "name": "Accuracy",
-      "rate": 6.5
+      "name": "Accuracy"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     }
   ],
   "suit_hh_du14": [
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "dmg_reduce",
-      "name": "DMG Reduce",
-      "rate": 19.5
+      "name": "DMG Reduce"
     },
     {
       "key": "resist_amp",
-      "name": "Resist Amp",
-      "rate": 296.5
+      "name": "Resist Amp"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     }
   ],
   "gloves_hh_du14": [
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "accu",
-      "name": "Accuracy",
-      "rate": 6.5
+      "name": "Accuracy"
     },
     {
       "key": "all_att",
-      "name": "All Att",
-      "rate": 34
+      "name": "All Att"
     },
     {
       "key": "all_amp",
-      "name": "All Amp",
-      "rate": 348.63
+      "name": "All Amp"
     }
   ],
   "boots_hh_du14": [
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "ig_accu",
-      "name": "Ig Accu",
-      "rate": 5.3
+      "name": "Ig Accu"
     },
     {
       "key": "ig_pen",
-      "name": "Ig Pen",
-      "rate": 53.1
+      "name": "Ig Pen"
     }
   ],
   "helm_hh_du14": [
     {
       "key": "hp",
-      "name": "HP",
-      "rate": 5
+      "name": "HP"
     },
     {
       "key": "def",
-      "name": "Def",
-      "rate": 21
+      "name": "Def"
     },
     {
       "key": "def_rate",
-      "name": "Def Rate",
-      "rate": 2.4
+      "name": "Def Rate"
     },
     {
       "key": "resist_cr",
-      "name": "Resist CR",
-      "rate": 636
+      "name": "Resist CR"
     },
     {
       "key": "resist_cd",
-      "name": "Resist CD",
-      "rate": 150
+      "name": "Resist CD"
     }
   ],
   "weapon_1h_ulti_du12": [
     {
       "key": "att_rate",
-      "name": "Att Rate",
-      "rate": 3
+      "name": "Att Rate"
     },
     {
       "key": "cd",
-      "name": "Crit DMG",
-      "rate": 176.5
+      "name": "Crit DMG"
     },
     {
       "key": "accu",
-      "name": "Accuracy",
-      "rate": 6.5
+      "name": "Accuracy"
     },
     {
       "key": "all_att",
-      "name": "All Att",
-      "rate": 34
+      "name": "All Att"
     }
   ]
 }

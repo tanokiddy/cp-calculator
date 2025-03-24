@@ -31,7 +31,7 @@ export type StatKey =
 export type StatType = {
   key: StatKey;
   name: string;
-  rate: number;
+  rate?: number;
 };
 
 export type CPTypekey =

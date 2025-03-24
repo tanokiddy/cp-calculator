@@ -33,3 +33,13 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+/**
+ * CORRECT:
+ * att_rate
+ * def_rate
+ * def
+ * hp
+ * accu
+ */

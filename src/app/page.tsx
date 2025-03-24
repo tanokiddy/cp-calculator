@@ -44,10 +44,10 @@ export default function Home() {
     let total: number = 0;
     Object.entries(data).forEach(([key, value]) => {
       if (Number.isNaN(value)) return;
-      total += value * Base[key as StatKey];
+      total += Math.floor(value * Base[key as StatKey]);
     });
 
-    setTotal(Math.floor(total));
+    setTotal(total);
   };
 
   const onSubmit = (data: InputType) => {
