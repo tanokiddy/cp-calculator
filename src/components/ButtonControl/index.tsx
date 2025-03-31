@@ -16,7 +16,7 @@ const ButtonControl = ({ onReset }: ButtonControlProps) => {
         )}
         onClick={onReset}
       >
-        Reset Field
+        Reset
       </button>
     </div>
   );

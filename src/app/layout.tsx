@@ -38,8 +38,9 @@ export default function RootLayout({
 /**
  * CORRECT:
  * att_rate
+ * accu
+ * 
  * def_rate
  * def
  * hp
- * accu
  */
